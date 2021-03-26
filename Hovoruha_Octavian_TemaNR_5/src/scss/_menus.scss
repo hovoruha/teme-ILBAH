@@ -165,3 +165,35 @@ textarea.footer-item_input {
 }
 
 // desktop layout screen-width : 1025px +...
+@media screen and (min-width: 1025px) {
+  .nav {
+    @include flex-row(center, center, nowrap);
+    height: 10%;
+    width: 100%;
+    transform: translateX(0);
+
+    &_burger-btn {
+      display: none;
+    }
+
+    &-links {
+      @include flex-row(center, flex-end, nowrap);
+      width: 100%;
+      padding-right: 20px;
+
+      &-item {
+        &_icon {
+          display: none;
+        }
+
+        &_link {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .footer {
+    padding: 20px 35%;
+  }
+}
