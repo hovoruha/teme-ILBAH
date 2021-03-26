@@ -356,7 +356,7 @@ textarea.footer-item_input {
 @media screen and (min-width: 1025px) {
   .card {
     margin-right: 10px;
-    transition: all filter 0.3s ease-in;
+    transition: all 0.3s ease-in;
   }
   .card:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 255, 255, 0.8), 0 6px 20px 0 rgba(0, 255, 255, 0.8);
