@@ -1,0 +1,7 @@
+Detalii tema:
+• adaugati 4 imagini diferite pe pagina
+	→ adaugati widht si height pentru fiecare
+	→ src din cale relativa, diferita pentru fiecare img in parte
+• creeati 2 tabele
+	→ unul sa contina 3 randuri
+	→ celalalt sa contina 5 coloane
