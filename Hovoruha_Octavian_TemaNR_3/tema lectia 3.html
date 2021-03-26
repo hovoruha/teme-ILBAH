@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta lang="en" />
+		<meta charset="UTF-8" />
+		<title>Lectia 3 - Tema</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<!-- definire stiluri aici -->
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+		
+			.container{
+				display: flex;
+				flex-flow: row wrap;
+				align-items: center;
+				justify-content: center;
+				margin: 20px;
+			}
+			
+			.image{
+				display: block;
+				margin: 10px;
+				border-radius: 10px;
+				overflow: hidden;
+				width: 300px;
+				height: 200px;
+			}
+			
+			table{
+				border-collapse: collapse;
+				margin: 30px;
+				text-align: center;
+			}
+			
+			th{
+				background-color: lightblue;
+				border-bottom: 3px double blue;
+				padding: 3px 15px;
+			}
+			
+			td{
+				padding: 10px 0;
+			}
+			
+			tr:nth-child(even){
+				border-top: 1px solid lightgrey;
+				border-bottom: 1px solid lightgrey;
+			}
+			
+			tr td:first-child{
+				font-weight: bold;
+				color: blue;
+			}
+			
+			tr:hover{
+				background-color: lightgrey;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<!--Detalii tema:
+		• adaugati 4 imagini diferite pe pagina
+			→ adaugati widht si height pentru fiecare
+			→ src din cale relativa, diferita pentru fiecare img in parte
+		• creeati 2 tabele
+			→ unul sa contina 3 randuri
+			→ celalalt sa contina 5 coloane-->
+				
+				<!-- implementare poze ---------------------------------->
+				<div class="container">
+					<div class="image">
+						<img src="poza 1/dandelion.jpg" />
+					</div>
+					<div class="image">
+						<img src="poza 2/abstract-flat.jpg" />
+					</div>
+					<div class="image">
+						<img src="poza 3/Fitriandhita_color2.jpeg" />
+					</div>
+					<div class="image">
+						<img src="poza 4/fog.jpeg" />
+					</div>
+				</div>
+				<!-- implementare tabele -------------------------------->
+				<div class="container">
+					<!-- tabel #1 → contine 3 randuri... -->
+					<table id="tabel1">
+						<thead>
+							<tr>
+								<th>Nrc</th>
+								<th>Cod articol</th>
+								<th>Descriere</th>
+								<th>Valoare</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>0001 123 777</td>
+								<td>Articol #1</td>
+								<td>100</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>0001 123 888</td>
+								<td>Articol #2</td>
+								<td>200</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>0001 123 999</td>
+								<td>Articol #3</td>
+								<td>300</td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- tabel #2 → contine 5 coloane... -->
+					<table id="tabel2">
+						<thead>
+							<tr>
+								<th>Nrc</th>
+								<th>Data intrare</th>
+								<th>Locatie</th>
+								<th>Utilizator</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>10/02/2021</td>
+								<td>Depozit 1</td>
+								<td>G.P</td>
+								<td>activ</td>
+							</tr>
+							<tr>
+								<td>2</td>
+								<td>14/02/2021</td>
+								<td>Agentia B</td>
+								<td>O.M</td>
+								<td>blocat</td>
+							</tr>
+							<tr>
+								<td>3</td>
+								<td>21/02/2021</td>
+								<td>Agentia C</td>
+								<td>M.T</td>
+								<td>asteapta...</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+	</body>
+</html>

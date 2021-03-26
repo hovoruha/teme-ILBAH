@@ -1,0 +1,16 @@
+@use 'functions' as *;
+@use 'mixins' as *;
+@use 'fonts' as *;
+@use 'colors' as *;
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}

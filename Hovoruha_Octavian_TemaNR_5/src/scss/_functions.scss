@@ -1,0 +1,10 @@
+@use 'fonts' as *;
+@use 'colors' as *;
+
+@function set-font($for) {
+  @return map-get($map: $fonts, $key: $for);
+}
+
+@function set-color($color) {
+  @return map-get($map: $colors, $key: $color);
+}

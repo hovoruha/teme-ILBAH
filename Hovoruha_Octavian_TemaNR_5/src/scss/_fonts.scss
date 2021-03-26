@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Lexend";
+  src: url("../../fonts/Lexend-Regular.ttf") format("ttf");
+}
+
+$fonts: (
+  "heading1": "Lexend",
+  "heading2": "Arial",
+  "plain-text": "Tahoma",
+);

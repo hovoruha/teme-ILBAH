@@ -1,0 +1,321 @@
+@font-face {
+  font-family: "Lexend";
+  src: url("../../fonts/Lexend-Regular.ttf") format("ttf");
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  background: url("../assets/bg5.png");
+  background-position: top right;
+  background-repeat: repeat-y;
+  background-size: contain;
+}
+
+.intro {
+  width: 100%;
+  height: auto;
+  padding-top: 80px;
+}
+.intro .title {
+  text-align: center;
+  padding: 0 10px 10px;
+  color: white;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.intro .sub-title {
+  padding: 0 10px 10px;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  padding: 0 10px;
+}
+
+@media screen and (min-width: 415px) {
+  .intro {
+    padding: 180px 100px 0;
+  }
+  .intro .title {
+    font-size: 45px;
+    line-height: 3.5rem;
+  }
+  .intro .sub-title {
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 2.5rem;
+  }
+
+  .section {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 30px;
+  }
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateX(-100%);
+  transition: all 0.4s ease-in-out;
+}
+.nav.show {
+  transform: translateX(0);
+  transition: all 0.4s ease-in-out;
+}
+.nav_burger-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX(240%);
+  font-size: 25px;
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.3s ease-in;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+.nav_burger-btn:hover {
+  cursor: pointer;
+  text-shadow: 2px 4px 8px rgba(0, 255, 255, 0.8), -2px -4px 8px rgba(0, 255, 255, 0.8);
+}
+.nav_burger-btn.show {
+  color: transparent;
+  text-shadow: none;
+  transition: color 0.3s ease-in;
+}
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 80px 20px 0;
+  transition: all 0.3s ease;
+}
+.nav-links-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.nav-links-item:hover {
+  cursor: pointer;
+  text-shadow: 2px 4px 8px rgba(0, 255, 255, 0.8), -2px -4px 8px rgba(0, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+.nav-links-item_icon {
+  font-size: 30px;
+  color: white;
+}
+.nav-links-item_link {
+  display: none;
+  color: white;
+  margin-left: 30px;
+  font-size: 30px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  padding: 20px 10%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.footer-item {
+  width: 100%;
+}
+.footer-item:nth-child(even) {
+  margin: 10px 0;
+}
+.footer-item_input {
+  width: 100%;
+  height: 35px;
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid lightgray;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding-left: 10px;
+  transition: all 0.3s ease;
+}
+.footer-item_input::placeholder {
+  color: black;
+}
+.footer-item_input:hover, .footer-item_input:focus {
+  cursor: pointer;
+  border: 1px solid cyan;
+  box-shadow: 0 4px 8px 0 rgba(0, 255, 255, 0.8), 0 6px 20px 0 rgba(0, 255, 255, 0.8);
+}
+
+textarea.footer-item_input {
+  height: 100px;
+  padding-top: 5px;
+}
+
+@media screen and (min-width: 415px) {
+  .nav-links {
+    padding: 80px 40px 0;
+  }
+  .nav-links-item {
+    margin-bottom: 80px;
+  }
+  .nav-links-item_link {
+    display: block;
+  }
+  .nav_burger-btn {
+    font-size: 40px;
+  }
+
+  .footer {
+    padding: 30px 25%;
+  }
+  .footer-item:nth-child(even) {
+    margin: 20px 0;
+  }
+  .footer-item_input {
+    height: 45px;
+  }
+  .footer-item_input::placeholder {
+    font-size: 15px;
+  }
+
+  textarea.footer-item_input {
+    height: 150px;
+  }
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+.card-img img {
+  width: 100%;
+}
+.card:hover {
+  cursor: pointer;
+}
+.card-content {
+  width: 100%;
+  text-align: left;
+  font-size: 15px;
+  line-height: 1.3rem;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 5px;
+  margin-top: -6px;
+}
+.card-input {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: height 0.3s ease-in-out;
+}
+.card-input.show {
+  height: 100%;
+  transition: height 0.3s ease-in-out;
+}
+.card-input_btn {
+  height: 0;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 30px;
+  transition: all 0.3s ease;
+}
+.card-input_btn.show {
+  height: auto;
+}
+.card-input_btn:hover {
+  text-shadow: 2px 4px 8px rgba(0, 255, 255, 0.8), -2px -4px 8px rgba(0, 255, 255, 0.8);
+}
+.card-input_btn span {
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 415px) {
+  .card {
+    width: 400px;
+  }
+  .card-img img {
+    width: 100%;
+  }
+  .card-content {
+    width: 100%;
+  }
+}
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.5rem;
+  list-style: none;
+  font-family: "Lexend";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*# sourceMappingURL=main.css.map */

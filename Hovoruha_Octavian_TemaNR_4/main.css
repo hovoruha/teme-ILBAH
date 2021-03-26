@@ -1,0 +1,157 @@
+/* main resets... */
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	line-height: 1.5em;
+	font-family: Calibri body, sans-serif;
+}
+
+ul,li{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+/* ------------- */
+
+body{
+	/* pentru a obtine layout-ul din poza... */
+	display: flex;
+	align-items: center;
+	padding: 0 40px;
+	/* ------------------------------------- */
+	min-width: 700px;
+	height: 100vh;
+}
+
+.wrapper{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	/* pentru a obtine layout-ul din poza... */
+	height: auto;
+	/* ------------------------------------- */
+	/* activati proprietatea pentru afisare full-screen... ↓ */
+	/* height: 100%; */
+	background-color: #fe6a70;
+	padding: 30px 0;
+}
+
+.left, .right{
+	margin: 20px 80px;
+}
+
+.left{
+	width: 500px;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content:center;
+	align-items:flex-start;
+	color: #fff;
+}
+
+.left h1{
+	font-family: Arial black, sans-serif;
+	margin-bottom: 20px;
+}
+
+.right{
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.right .up{
+	width: 100%;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.right .down{
+	width: 100%;
+	display: block;
+}
+
+.btn{
+	width: 100%;
+	border-radius: 10px;
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px 10px;
+	background-color: #684aa7;
+	box-shadow: 0 4px rgba(0, 0, 0, 0.3);
+	color: #fff;
+	cursor: pointer;
+}
+
+.btn:hover{
+	background-color: #543593;
+	transition: all 0.3s ease-in-out;
+}
+
+form{
+	width: 500px;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.card{
+	border-radius: 10px;
+	background-color: #fff;
+	padding: 40px 20px;
+	box-shadow: 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-input{
+	width: 100%;
+	margin-bottom: 20px;
+	height: 50px;
+	/* border: 1px solid #bcb3d4; */
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	padding: 0 10px;
+	outline: none;
+	font-weight: 900;
+	color: #9a9a9a;
+}
+
+.form-submit{
+	width: 100%;
+	border-radius: 5px;
+	text-align: center;
+	vertical-align: middle;
+	padding: 10px 0;
+	margin-bottom: 20px;
+	background-color: #00d68f;
+	box-shadow: 0 4px #5ec093;
+	border: none;
+	font-family: Calibri body, sans-serif;
+	font-weight: 800;
+	color: #fff;
+	cursor: pointer;
+}
+
+.form-submit:hover{
+	background-color: #02B378;
+	transition: all 0.3s ease-in-out;
+}
+
+.form-footer{
+	width: 100%;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: center;
+	color: lightgray;
+}
+
+.form-footer div{
+	font-weight: 800;
+	color: #fe6070;
+}

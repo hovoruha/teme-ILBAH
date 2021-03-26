@@ -1,0 +1,19 @@
+@use 'functions' as *;
+@use 'fonts' as *;
+@use 'colors' as *;
+
+@mixin flex-row($align, $justify, $wrap) {
+  display: flex;
+  flex-direction: row;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+}
+
+@mixin flex-col($align, $justify, $wrap) {
+  display: flex;
+  flex-direction: column;
+  align-items: $align;
+  justify-content: $justify;
+  flex-wrap: $wrap;
+}
