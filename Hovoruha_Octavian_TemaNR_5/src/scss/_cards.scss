@@ -26,9 +26,9 @@
     text-align: center;
     font-size: 15px;
     line-height: 1.3rem;
-    color: white;
-    text-shadow: 1px 1px 1px rgba(black, 0.7);
-    background-color: rgba($color: #000000, $alpha: 0.6);
+    color: set-color(txt-primary);
+    text-shadow: 1px 1px 1px rgba(set-color(shadow-primary), 0.7);
+    background-color: rgba(set-color(bg-secondary), 0.6);
     padding: 5px;
     margin-top: -7px;
   }
@@ -42,7 +42,7 @@
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    background-color: rgba($color: #000000, $alpha: 0.8);
+    background-color: rgba(set-color(bg-secondary), 0.8);
     transition: height 0.3s ease-in-out;
 
     &.show {
@@ -53,7 +53,7 @@
     &_btn {
       height: 0;
       background-color: transparent;
-      color: white;
+      color: set-color(txt-primary);
       outline: none;
       border: none;
       font-size: 30px;
@@ -64,8 +64,8 @@
       }
 
       &:hover {
-        text-shadow: 2px 4px 8px rgba(0, 255, 255, 0.8),
-          -2px -4px 8px rgba(0, 255, 255, 0.8);
+        text-shadow: 2px 4px 8px rgba(set-color(shadow-secondary), 0.8),
+          -2px -4px 8px rgba(set-color(shadow-secondary), 0.8);
       }
 
       span {
@@ -79,7 +79,8 @@
 @media screen and (min-width: 415px) {
   .card {
     width: 400px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(set-color(shadow-primary), 0.2),
+      0 6px 20px 0 rgba(set-color(shadow-primary), 0.19);
 
     &-img {
       img {
@@ -100,8 +101,8 @@
     transition: all 0.3s ease-in;
 
     &:hover {
-      box-shadow: 0 4px 8px 0 rgba(0, 255, 255, 0.8),
-        0 6px 20px 0 rgba(0, 255, 255, 0.8);
+      box-shadow: 0 4px 8px 0 rgba(set-color(shadow-secondary), 0.8),
+        0 6px 20px 0 rgba(set-color(shadow-secondary), 0.8);
       transform: scale(1.1);
       transition: all 0.3s ease-in;
 
@@ -121,7 +122,7 @@
       display: block;
       height: 70px;
       text-align: center;
-      background-color: rgba($color: #000000, $alpha: 0.6);
+      background-color: rgba(set-color(bg-secondary), 0.6);
       padding: 20px 0;
     }
   }

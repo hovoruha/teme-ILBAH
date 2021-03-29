@@ -11,7 +11,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  background-color: rgba($color: #000000, $alpha: 0.8);
+  background-color: rgba(set-color(bg-secondary), 0.8);
   transform: translateX(-100%);
   transition: all 0.4s ease-in-out;
 
@@ -28,15 +28,15 @@
     transform: translateX(240%);
     font-size: 25px;
     margin-top: 30px;
-    color: rgba(white, 0.8);
+    color: rgba(set-color(txt-primary), 0.8);
     transition: color 0.3s ease-in;
-    text-shadow: 1px 1px 1px rgba(black, 0.7);
+    text-shadow: 1px 1px 1px rgba(set-color(shadow-primary), 0.7);
     transition: all 0.3s ease;
 
     &:hover {
       cursor: pointer;
-      text-shadow: 2px 4px 8px rgba(0, 255, 255, 0.8),
-        -2px -4px 8px rgba(0, 255, 255, 0.8);
+      text-shadow: 2px 4px 8px rgba(set-color(shadow-secondary), 0.8),
+        -2px -4px 8px rgba(set-color(shadow-secondary), 0.8);
     }
 
     &.show {
@@ -58,19 +58,19 @@
 
       &:hover {
         cursor: pointer;
-        text-shadow: 2px 4px 8px rgba(0, 255, 255, 0.8),
-          -2px -4px 8px rgba(0, 255, 255, 0.8);
+        text-shadow: 2px 4px 8px rgba(set-color(shadow-secondary), 0.8),
+          -2px -4px 8px rgba(set-color(shadow-secondary), 0.8);
         transition: all 0.3s ease;
       }
 
       &_icon {
         font-size: 30px;
-        color: white;
+        color: set-color(txt-primary);
       }
 
       &_link {
         display: none;
-        color: white;
+        color: set-color(txt-primary);
         margin-left: 30px;
         font-size: 30px;
         // text-align: right;
@@ -84,7 +84,7 @@
   width: 100%;
   height: auto;
   padding: 20px 10%;
-  background-color: rgba($color: black, $alpha: 0.8);
+  background-color: rgba(set-color(bg-secondary), 0.8);
 
   &-item {
     width: 100%;
@@ -98,21 +98,21 @@
       height: 35px;
       outline: none;
       border-radius: 8px;
-      border: 1px solid lightgray;
-      background-color: rgba($color: white, $alpha: 0.5);
+      border: 1px solid set-color(border-primary);
+      background-color: rgba(set-color(bg-primary), 0.5);
       padding-left: 10px;
       transition: all 0.3s ease;
 
       &::placeholder {
-        color: black;
+        color: set-color(txt-secondary);
       }
 
       &:hover,
       &:focus {
         cursor: pointer;
-        border: 1px solid cyan;
-        box-shadow: 0 4px 8px 0 rgba(0, 255, 255, 0.8),
-          0 6px 20px 0 rgba(0, 255, 255, 0.8);
+        border: 1px solid set-color(border-secondary);
+        box-shadow: 0 4px 8px 0 rgba(set-color(shadow-secondary), 0.8),
+          0 6px 20px 0 rgba(set-color(shadow-secondary), 0.8);
       }
     }
   }
