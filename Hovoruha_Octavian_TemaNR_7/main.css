@@ -19,7 +19,7 @@ a:visited {
 }
 
 /* ______________________________________ */
-
+/* landing page styles___________________ */
 .wrapper {
   position: relative;
   width: 100%;
@@ -37,14 +37,30 @@ a:visited {
   flex-flow: column wrap;
   align-items: center;
   justify-content: space-around;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 4s;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
 }
 
 .wrapper .sidebar .sidebar-item {
+  position: relative;
   width: 100%;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.wrapper .sidebar .sidebar-item .sidebar-item-text {
+  position: absolute;
+  left: 90px;
+  z-index: -1;
+  display: block;
+  /* color: black; */
+  color: transparent;
+  transition: all 0.4s ease-in-out;
 }
 
 .wrapper .sidebar .sidebar-item .sidebar-item-icon {
@@ -56,30 +72,19 @@ a:visited {
   transition: all 1.5s ease-in-out;
 }
 
-.wrapper .sidebar .sidebar-item .sidebar-item-icon span {
-  position: absolute;
-  top: -37px;
-  left: -41px;
-  width: 100px;
-  white-space: nowrap;
-  color: transparent; /* de setat pe transparent... */
-  transform: rotateZ(-90deg);
-  transition: all 0.3s ease-in-out;
-}
-
 .wrapper .sidebar .sidebar-item .sidebar-item-icon:hover {
-  cursor: pointer;
+  /* cursor: pointer; */
   transform: rotateZ(90deg);
   transition: transform 0.3s ease-in-out;
 }
 
-.wrapper .sidebar .sidebar-item .sidebar-item-icon:hover span {
-  transform: rotateZ(-90deg) translate(50px);
+.wrapper .sidebar .sidebar-item .sidebar-item-icon:hover + .sidebar-item-text {
+  transform: translateX(70px);
   color: red;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-/* .wrapper
+.wrapper
   .sidebar
   .sidebar-item
   .sidebar-item-icon:hover
@@ -87,7 +92,7 @@ a:visited {
   animation-name: pulse;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
-} */
+}
 
 .wrapper .sidebar .sidebar-item .sidebar-item-icon:hover::before {
   transform: translateX(-15px);
@@ -136,11 +141,29 @@ a:visited {
   background-color: red;
 }
 
+.showcase {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase .showcase-title {
+  text-transform: uppercase;
+  font-size: 450%;
+  color: rgb(46, 44, 44);
+}
+
 /* definire animatii________________ */
 
 @keyframes pulse {
   0% {
-    transform: scale(1);
+    transform: scale(0.7);
   }
   10% {
     transform: scale(1.1);
@@ -158,6 +181,73 @@ a:visited {
     transform: scale(1.1);
   }
   100% {
-    transform: scale(1);
+    transform: scale(0.7);
   }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* first page styles___________________ */
+
+.wrapper .sidebar.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(46, 44, 44);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 4s;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+}
+
+.wrapper .sidebar .sidebar-item .sidebar-item-text.nav {
+  position: absolute;
+  left: 930px;
+  z-index: -1;
+  display: block;
+  /* color: black; */
+  color: transparent;
+  transition: all 0.4s ease-in-out;
 }
