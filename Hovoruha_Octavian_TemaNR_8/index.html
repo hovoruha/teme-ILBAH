@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Lucrarea 21 - exercitiul 1</title>
+  </head>
+  <body>
+    <div class="app-title">
+      <span style="margin-right: 10px; font-size: 20px">
+        Javascript code testing
+      </span>
+      <img
+        style="display: inline"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png"
+        width="60"
+        height="60"
+      />
+    </div>
+    <div id="app">
+      <div id="output"></div>
+      <!-- calcul TVA... -->
+      <div class="card">
+        <h2 class="card-title">Calcul TVA</h2>
+        <span id="outputTVA" class="card-output">output aici:</span>
+        <form id="calculTVA" action="#">
+          <input type="text" placeholder="introdu valoarea" />
+          <input type="text" value="20.6" disabled />
+          <input type="submit" value="CALCULEAZA" />
+        </form>
+      </div>
+      <!-- calcul temperatura... -->
+      <div class="card">
+        <h2 class="card-title">Conversie Celsius in Fahrenheit</h2>
+        <span id="outputTemp" class="card-output">output aici:</span>
+        <form id="calculTemp" action="#">
+          <input
+            type="text"
+            placeholder="introdu temperatura in grd. Celsius"
+          />
+          <input type="text" value="1.8" disabled />
+          <input type="submit" value="CALCULEAZA" />
+        </form>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <!-- <script src="test1.js"></script> -->
+    <!-- <script src="test2.js"></script> -->
+    <!-- <script src="test3.js"></script> -->
+    <!-- <script src="test4.js"></script> -->
+  </body>
+</html>

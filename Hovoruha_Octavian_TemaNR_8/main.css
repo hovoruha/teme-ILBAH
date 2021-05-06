@@ -1,0 +1,80 @@
+:root {
+  --default: darkgray;
+  --primary: #18a1cf;
+  --danger: #fc8194;
+  --warning: #f0be2d;
+  --valid: #41b668;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.6rem;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+.app-title {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 40px;
+}
+
+.card {
+  width: 350px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card .card-title {
+  margin-bottom: 20px;
+}
+
+.card .card-output {
+  margin: 30px 0;
+  display: block;
+}
+
+input[type] {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  width: 100%;
+  border: 1px solid gray;
+}
+
+input[type="submit"] {
+  background-color: var(--default);
+  color: white;
+  font-weight: 900;
+}
+
+input:disabled {
+  border-color: lightgray;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--primary);
+}
